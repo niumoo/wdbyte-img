@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.5/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.3"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.5/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Java 性能分析优化","c":[{"t":"heading","d":2,"p":{"lines":[1,2]},"v":"JDK 图形化工具","c":[{"t":"heading","d":3,"p":{"lines":[2,3]},"v":"JMC（JDK Mission Control）","c":[{"t":"list_item","d":5,"p":{"lines":[3,4]},"v":"<a href=\"https://docs.oracle.com/en/java/java-components/jdk-mission-control/8/user-guide/preface.html#GUID-A57942ED-2904-4E9D-BCAE-5AF8F3D46F81\">官方文档</a>"}]},{"t":"heading","d":3,"p":{"lines":[4,5]},"v":"JFR（Java Flight Recorder）","c":[{"t":"list_item","d":5,"p":{"lines":[5,6]},"v":"<a href=\"https://docs.oracle.com/javacomponents/jmc-5-4/jfr-runtime-guide/about.htm#JFRUH170\">官方文档</a>"}]},{"t":"heading","d":3,"p":{"lines":[6,7]},"v":"jconsole"},{"t":"heading","d":3,"p":{"lines":[7,8]},"v":"jVisualVM"}]},{"t":"heading","d":2,"p":{"lines":[9,10]},"v":"JDK 命令工具","c":[{"t":"heading","d":3,"p":{"lines":[10,11]},"v":"jmap"},{"t":"heading","d":3,"p":{"lines":[11,12]},"v":"jhat"},{"t":"heading","d":3,"p":{"lines":[12,13]},"v":"jstack"},{"t":"heading","d":3,"p":{"lines":[13,14]},"v":"jstat"},{"t":"heading","d":3,"p":{"lines":[14,15]},"v":"jinfo"},{"t":"heading","d":3,"p":{"lines":[15,16]},"v":"jcmd"}]},{"t":"heading","d":2,"p":{"lines":[17,18]},"v":"开源工具","c":[{"t":"heading","d":3,"p":{"lines":[18,19]},"v":"Arthas（阿里开源）"},{"t":"heading","d":3,"p":{"lines":[19,20]},"v":"Tprofiler（淘宝开源）"},{"t":"heading","d":3,"p":{"lines":[20,21]},"v":"Profiler4J"}]},{"t":"heading","d":2,"p":{"lines":[21,22]},"v":"商业工具","c":[{"t":"heading","d":3,"p":{"lines":[22,23]},"v":"Jprofiler"},{"t":"heading","d":3,"p":{"lines":[23,24]},"v":"YourKit Java Profiler"}]},{"t":"heading","d":2,"p":{"lines":[24,25]},"v":"运行性能","c":[{"t":"heading","d":3,"p":{"lines":[25,26]},"v":"JMH 基准测试"}]}]})</script>
+</body>
+</html>
